@@ -1,0 +1,9 @@
+repository: trasparente/help
+plugins:
+  - jekyll-coffeescript
+  - jekyll-github-metadata
+  - jekyll-default-layout
+exclude:
+  - README.md
+  - LICENSE
+timezone: Europe/Rome

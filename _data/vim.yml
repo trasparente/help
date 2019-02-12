@@ -1,0 +1,3 @@
+terminal:
+  conquer:
+    code: ":ConqueTermSplit jekyll s"

@@ -1,0 +1,11 @@
+tmux:
+  close_panel:
+    code: Ctrl-B x
+  next_panel:
+    code: Ctrl-B o
+  split_horizontally:
+    code: Ctrl-B %
+    name: Split current pane horizontally
+  split_vertically:
+    code: "Ctrl-B \""
+    name: Split current pane horizontally
