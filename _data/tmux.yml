@@ -1,0 +1,38 @@
+panel:
+  close:
+    - CTRL-D
+    - CTRL-B (y)
+  switch:
+    arrows: CTRL-B (arrows)
+    next: CTRL-B o
+    previous: "CTRL-b ;"
+  show_number: CTRL-Q
+start: tmux
+zoom:
+  code: CTRL-B Z
+  comment: toggle zoomed/unzoomed
+clock:
+  on: CTRL-T
+  off: any key
+clipboard:
+  code: \"+p
+  comment: Copy from system clipboard
+registers:
+  list: :reg
+  paste: \"xp (paste register x)
+  link: http://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers  
+scroll:
+  enter: CTRL-[
+  exit: q
+split:
+  horizontally: CTRL-B %
+  vertically: "CTRL-B \""
+version: tmux -V
+todo:
+  - layout
+  - save from I
+links:
+  - https://gist.github.com/henrik/1967800 
+  - https://github.com/tmux-plugins/tpm
+  - https://github.com/tmux-plugins/tmux-resurrect
+  - http://tmuxp.git-pull.com/en/latest/about_tmux.html

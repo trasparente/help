@@ -1,6 +1,7 @@
 tmux:
   start: tmux
-  close_panel: Ctrl-B x (y)
+  close_panel: Ctrl-d
+  swith_panel: Ctrl-B (arrows)
   next_panel: Ctrl-B o
   previous_panel: "Ctrl-B ;"
   split_horizontally: Ctrl-B %

@@ -1,12 +1,16 @@
 ---
 ---
-{% for data in site.data %}
+{% assign data_sorted = site.data | sorted %}
+{% for data in data_sorted %}
 <section class="{{ data[0] | slugify }}">
   <header>
     {{ data[0] }}
   </header>
 {% for element in data[1] %}
   <article>
+{% if element[1].first == nil %}
+{% include level_0.html %}
+{% else %}
     <header>
       {{ element[0] }}
     </header>
@@ -23,15 +27,20 @@
       <dd>{{ command }}</dd>
 {% else %}
 {% if command[1].first %}
+      <span class="command_title">
+        {{ command[0] | replace: "_", " " }}
+      </span>
+{% for subcommand in command[1] %}
       <dt>
-        {{ command[0] | replace: "_", " " | upcase }}
+        {{ subcommand[0] | replace: "_", " " }}
       </dt>
       <dd>
-        {{ command[1].code | newline_to_br }}
+        {{ subcommand[1] | newline_to_br }}
       </dd>
+{% endfor %}
 {% else %}
       <dt>
-       {{ command[0] | replace: "_", " " | upcase }}
+       {{ command[0] | replace: "_", " " }}
       </dt>
       <dd>
         {{ command[1] | newline_to_br }}
@@ -41,6 +50,7 @@
 {% endif %}
 {% endfor %}
     </dl>
+{% endif %}
   </article>
 {% endfor %}
 </section>

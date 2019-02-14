@@ -1,0 +1,43 @@
+body
+  font-family: serif
+/* Inherit headings */
+section > header
+  font-size: 2em
+  margin: .67em 0
+  @extend .heading
+article > header
+  font-size: 1.5em
+  margin: .75em 0
+  @extend .heading
+.command_title
+  font-size: 1.17em
+  margin: .83em 0
+  @extend .heading
+  &:not(:first-child)
+    margin-top: 1em
+.heading
+  font-weight: bolder
+  display: block
+/* Articles */
+dl
+  margin: 1em 0
+  display: grid
+  grid-template-columns: max-content auto
+dt
+  text-transform: capitalize
+  grid-column-start: 1
+dd
+  grid-column-start: 2
+  margin-inline-start: 2ch
+  font-family: monospace
+  font-size: 16px
+/* Sections */
+section
+  margin-left: 1ch
+article
+  margin-left: 2ch
+dl
+  margin-left: 2ch
+/* Nav Bar */
+nav .right
+  float: right

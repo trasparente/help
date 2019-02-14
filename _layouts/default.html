@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ site.github.repository_name }}</title>
     <style>
-    {% capture style %}{% include style.sass %}{% endcapture %}{{ style | sassify }}
+    {% capture style %}{% include {{ site.skin }}.sass %}{% endcapture %}{{ style | sassify }}
     </style>
   </head>
   <body>
