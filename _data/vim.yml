@@ -1,3 +1,14 @@
 terminal:
   conquer:
-    code: ":ConqueTermSplit jekyll s"
+    code: ConqueTermSplit jekyll s
+syntax:
+  - set syntax=liquid
+  - set filetype=liquid
+tabs: |
+  set tabstop     =4 (tab width)
+  set softtabstop =4 (white space)
+  set shiftwidth  =4 (whitespace)
+  set expandtab (use spaces instead of tab)
+html:
+  open_tag: (string) Ctrl-o
+  close_tag: (string) Ctrl-c

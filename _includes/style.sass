@@ -13,11 +13,11 @@ table
   td:first-child
     text-align: right
     padding-right: 4ch
-h2
+section > header
   font-size: 1em
   color: OrangeRed
   text-transform: uppercase
-h3
+article > header
   font-size: 1em
   color: LightSeaGreen
   margin-left: 3ch
@@ -26,8 +26,15 @@ main
   padding: .3em
 nav
   padding: .3em
-  color: ForestGreen
+  color: YellowGreen
   .right
     float: right
-code
+dl
+  display: grid
+  grid-template-columns: max-content auto
+dt
+  grid-column-start: 1
+dd
   color: white
+  grid-column-start: 2
+  margin-inline-start: 2ch
