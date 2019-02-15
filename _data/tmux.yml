@@ -1,25 +1,36 @@
+start: tmux
+options:
+  show_global: tmux show-options -g
+  show_window: tmux show-options -gw
+sessions:
+  list: tmux ls
+  attach: tmux a
+  open: tmux a -t session_name
+  exit: CTRL-B d
+conf:
+  file: "~/.tmux.conf"
+  run: CTRL-B I
 panel:
   close:
-    - CTRL-D
+    - CTRL-B d
     - CTRL-B (y)
   switch:
-    arrows: CTRL-B (arrows)
+    arrows: CTRL-B arrows
     next: CTRL-B o
     previous: "CTRL-b ;"
-  show_number: CTRL-Q
-start: tmux
+  show_number: CTRL-B q
 zoom:
   code: CTRL-B Z
   comment: toggle zoomed/unzoomed
 clock:
-  on: CTRL-T
+  on: CTRL-B CTRL-T
   off: any key
 clipboard:
-  code: \"+p
+  code: "\"+p"
   comment: Copy from system clipboard
 registers:
   list: :reg
-  paste: \"xp (paste register x)
+  paste: "\"xp (paste register x)"
   link: http://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers  
 scroll:
   enter: CTRL-[
@@ -30,7 +41,6 @@ split:
 version: tmux -V
 todo:
   - layout
-  - save from I
 links:
   - https://gist.github.com/henrik/1967800 
   - https://github.com/tmux-plugins/tpm

@@ -40,10 +40,10 @@
 {% endfor %}
 {% else %}
       <dt>
-       {{ command[0] | replace: "_", " " }}
+        {{ command[0] | replace: "_", " " }}
       </dt>
       <dd>
-        {{ command[1] | newline_to_br }}
+        {% include purify.html string=command %}
       </dd>
 {% endif %}
 {% endif %}

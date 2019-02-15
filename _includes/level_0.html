@@ -1,4 +1,4 @@
     <dl>
       <dt>{{ element[0] | replace: "_", " " | upcase }}</dt>
-      <dd>{{ element[1] }}</dd>
+      <dd>{% include purify.html string=element %}</dd>
     </dl>

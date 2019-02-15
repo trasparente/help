@@ -9,6 +9,13 @@ tabs: |
   set softtabstop =4 (white space)
   set shiftwidth  =4 (whitespace)
   set expandtab (use spaces instead of tab)
+panes:
+  open: vim -p filename
+  add: ":tabe filename"
+  move:
+    next: gt
+    previous: gT
+  link: http://vim.wikia.com/wiki/Using_tab_pages
 html:
   open_tag: (string) CTRL-O
   close_tag: (string) CTRL-C
@@ -17,31 +24,18 @@ case_character:
   lower: vu
 move:
   file:
-    begin:
-      - "{"
-      - 1G
-    end:
-      - "}"
-      - G
+    begin: 1G
+    end: G
   paragraph:
     up: "{"
     down: "}"
+save_quit:
+  write_all: ":wa (write all changed files)"
+  write_exit: ":xa (write all and exit)"
 vimrc:
   edit: "~$ vim .vimrc"
-  run: ":so %"
-  map_save: map W :wa
-save_quit:
-  write_all: ":wa write all changed files"
-  write_exit: ":xa exit all (save all changes and close Vim"
-tabs:
-  open: vim -p filename
-  add: :tabe filename 
-  move:
-    next: gt
-    previous: gT
-  link: http://vim.wikia.com/wiki/Using_tab_pages
-suspend:
-  stop: CTRL-Z
-  resume: CTRL-D
+  run: :so%
+  map: map W :wa<CR>
+  map_insert: imap <C-W> <Esc>:wa<CR>
 todo:
   - :colo pablo colorscheme

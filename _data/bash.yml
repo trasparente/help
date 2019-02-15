@@ -1,0 +1,20 @@
+shell: echo $SHELL
+usb: lsusb
+release: lsb_release -a
+alias: alias lll='ll --group-directories-first'
+filesystem:
+  move_rename: mv old_file new_file
+  remove_file: rm filename
+  remove_directory: rm -R folder
+move:
+  line:
+    beginning: CTRL-A
+    end: CTRL-E
+delete:
+  line:
+    beginning: CTRL-U
+    end: CTRL-K
+tar:
+  gz: tar -zxvf filename.gz
+  xz: tar -xvf filename.xz
+youtube_dl: "youtube-dl --extract-audio --audio-format mp3 -o 'FOLDER/playlist/%(title)s.%(ext)s' url"
