@@ -1,41 +1,28 @@
-terminal:
-  conquer:
-    code: ConqueTermSplit jekyll s
-syntax:
-  - set syntax=liquid
-  - set filetype=liquid
-tabs: |
-  set tabstop     =4 (tab width)
-  set softtabstop =4 (white space)
-  set shiftwidth  =4 (whitespace)
-  set expandtab (use spaces instead of tab)
-panes:
-  open: vim -p filename
-  add: ":tabe filename"
-  move:
-    next: gt
-    previous: gT
-  link: http://vim.wikia.com/wiki/Using_tab_pages
-html:
-  open_tag: (string) CTRL-O
-  close_tag: (string) CTRL-C
-case_character:
-  upper: vU
-  lower: vu
-move:
-  file:
-    begin: 1G
-    end: G
-  paragraph:
-    up: "{"
-    down: "}"
-save_quit:
-  write_all: ":wa (write all changed files)"
-  write_exit: ":xa (write all and exit)"
-vimrc:
-  edit: "~$ vim .vimrc"
-  run: :so%
-  map: map W :wa<CR>
-  map_insert: imap <C-W> <Esc>:wa<CR>
-todo:
-  - :colo pablo colorscheme
+- terminal, conquer: ConqueTermSplit jekyll s
+- syntax: set syntax=liquid
+- syntax: set filetype=liquid
+- panes, open: vim -p filename
+- panes, add: :tabe filename
+- panes, next: gt
+- panes, previous: gT
+- panes, link: http://vim.wikia.com/wiki/Using_tab_pages
+- case, character_upper: vU
+- case, character_lower: vu
+- save, write: :wa
+- save, write_exit: :xa
+- tabs:
+  - set tabstop     =4 (tab width)
+  - set softtabstop =4 (white space)
+  - set shiftwidth  =4 (whitespace)
+  - set expandtab (use spaces instead of tab)
+- html, open_tag: (string) Ctrl-o
+- html, close_tag: (string) Ctrl-c
+- move, file, begin: 1G
+- move, file, end: G
+- move, paragraph, up: "{"
+- move, paragraph, down: "}"
+- vimrc, edit: "~$ vim .vimrc"
+- vimrc, map_write: map W :wa<CR>
+- vimrc, map_insert: imap <C-W> <Esc>:wa<CR>
+- vimrc, map_save: map W :wa^M
+- todo: :colo pablo colorscheme

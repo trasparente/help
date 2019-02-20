@@ -1,1 +1,0 @@
-{% assign string=include.string[1] | newline_to_br | split: "<br />" %}{% for s in string %}{{ s | replace: "<br \>", "" | xml_escape }}{% unless string.size == 1 %}<br>{% endunless %}{% endfor %}

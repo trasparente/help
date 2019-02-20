@@ -4,6 +4,7 @@ body
 section > header
   font-size: 2em
   margin: .67em 0
+  border-bottom: 1px solid black
   @extend .heading
 article > header
   font-size: 1.5em
@@ -18,9 +19,10 @@ article > header
 .heading
   font-weight: bolder
   display: block
+  text-transform: capitalize
 /* Articles */
 dl
-  margin: 1em 0
+  margin: 1em
   display: grid
   grid-template-columns: max-content auto
 dt
@@ -30,7 +32,7 @@ dd
   grid-column-start: 2
   margin-inline-start: 2ch
   font-family: monospace
-  font-size: 16px
+  font-size: larger
 /* Sections */
 main
   margin-left: 1ch

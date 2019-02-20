@@ -15,8 +15,6 @@ Keyboard
 - ESC reset
 - ENTER next scope
 
-tmux maximize + clock
-
 Keywords reserved
 - code
 - comment
@@ -25,33 +23,10 @@ Keywords reserved
 
 ### Data hierarchy (Kind of help)
 
-**Filename** (area)
-
-**Basic** (direct)
-
 ```yml
-title: code
-```
-
-**List** (alternatives)
-
-```yml
-title:
-  - code 1
-  - code 2
-```
-
-**Multiple**
-
-```yml
-list_name:
-  title_1: code 1
-  title_2: code 2
-```
-
-**Arguments**
-
-```yml
-argument:
-  list
+- level_0: command
+- level_1, level_1_1: command
+- level_1, level_1_2: command
+- level_2, level_2_1, level 2_1_1: command
+- level_2, level_2_2, level 2_1_2: command
 ```

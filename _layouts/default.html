@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>{{ site.github.repository_name }}</title>
     <style>
-    {% capture style %}{% include {{ site.skin }}.sass %}{% endcapture %}{{ style | sassify }}
+{% capture style %}{% include {{ site.skin }}.sass %}{% endcapture %}{{ style | sassify }}
     </style>
   </head>
   <body>
     <nav>
       {{ site.github.repository_nwo }}
       <span class="right">
-        {{ site.github.build_revision }}
+        {{ site.github.latest_release | default: "No releases" }}
       </span>
     </nav>
     <main>

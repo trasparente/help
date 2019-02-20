@@ -1,7 +1,6 @@
-kill:
-  error: Address already in use
-  script: |
-    ps aux | grep jekyll
-    "petrosh 1637 ..."
-    "petrosh 31232 ..."
-    kill -9 1637
+- kill, error: Address already in use
+- kill, script:
+  - ps aux | grep jekyll
+  - "petrosh 1637 ..."
+  - "petrosh 31232 ..."
+  - kill -9 1637
