@@ -11,7 +11,7 @@
     <nav>
       {{ site.github.repository_nwo }}
       <span class="right">
-        {{ site.github.latest_release | default: "No releases" }}
+        {{ site.github.latest_release.tag_name | default: "No releases" }}
       </span>
     </nav>
     <main>

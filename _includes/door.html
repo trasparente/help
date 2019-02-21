@@ -1,7 +1,7 @@
 {% assign data_sorted = include.data | sort %}
 {% assign list = "" | split: "" %}
 {%- for tag in data_sorted -%}
-<section class="{{ tag[0] }}"><header>{{ tag[0] }}</header>
+<section id="{{ tag[0] }}"><header>{{ tag[0] }}</header>
 <dl>
 {%- for line in tag[1] -%} 
 {%- assign line_sorted = line | sort -%}

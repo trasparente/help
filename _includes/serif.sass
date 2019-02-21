@@ -1,11 +1,14 @@
 body
   font-family: serif
 /* Inherit headings */
-section > header
-  font-size: 2em
-  margin: .67em 0
-  border-bottom: 1px solid black
-  @extend .heading
+section
+  padding-top: 26px
+  margin-top: -26px
+  & > header
+    font-size: 2em
+    margin: .67em 0
+    border-bottom: 1px solid black
+    @extend .heading
 article > header
   font-size: 1.5em
   margin: .75em 0
@@ -33,6 +36,7 @@ dd
   margin-inline-start: 2ch
   font-family: monospace
   font-size: larger
+  margin-bottom: .3ch
 /* Sections */
 main
   margin: 0 1ch
