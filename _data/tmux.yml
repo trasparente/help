@@ -2,8 +2,8 @@
 - options, show_global: tmux show-options -g
 - options, show_window: tmux show-options -gw
 - options, show_bindings: tmux list-keys
-- sessions, list: tmux ls
-- sessions, attach: tmux a
+- session, list: tmux ls
+- session, attach: tmux a
 - session, open: tmux a -t session_name
 - session, exit: CTRL-B d
 - configuration, file: "~/.tmux.conf"
@@ -14,12 +14,9 @@
 - panel, next: CTRL-B o
 - panel, previous: "CTRL-b ;"
 - panel, show_number: CTRL-B q
-- zoom, toggle_zoom: CTRL-B Z
+- zoom, toggle_zoom: CTRL-B z
 - clock: CTRL-B CTRL-T
 - clipboard, copy_from_system: "\"+p"
-- registers, list: :reg
-- registers, paste: "\"xp (paste register x)"
-- registers, link: http://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers  
 - scroll, enter: CTRL-[
 - scroll, exit: q
 - split, horizontally: CTRL-B %

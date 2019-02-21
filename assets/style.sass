@@ -1,6 +1,15 @@
+---
+---
 body
   font-family: serif
-/* Inherit headings */
+a
+  color: black
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &:active
+    text-decoration: none
+/* Sections */
 section
   padding-top: 26px
   margin-top: -26px
@@ -9,6 +18,7 @@ section
     margin: .67em 0
     border-bottom: 1px solid black
     @extend .heading
+/* Articles */
 article > header
   font-size: 1.5em
   margin: .75em 0
@@ -23,7 +33,7 @@ article > header
   font-weight: bolder
   display: block
   text-transform: capitalize
-/* Articles */
+/* Description lists */
 dl
   margin: 1em
   display: grid
@@ -37,7 +47,7 @@ dd
   font-family: monospace
   font-size: larger
   margin-bottom: .3ch
-/* Sections */
+/* Main */
 main
   margin: 0 1ch
   padding-top: 1.8ch

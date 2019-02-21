@@ -1,0 +1,11 @@
+{%- assign string=include.string[1] | newline_to_br | split: "<br />" -%}
+{%- for s in string -%}
+{% assign domain = s | truncate: 4, "" %}
+{% if domain == "http" %}
+<a href="{{ s }}">{{ s }}</a>
+{% else %}
+{{ s | replace: "<br \>", "" | xml_escape }}
+{% endif %}
+{%- unless string.size == 1 -%}
+<br>{%- endunless -%}
+{%- endfor -%}

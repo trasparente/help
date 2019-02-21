@@ -24,5 +24,6 @@
 - vimrc, edit: "~$ vim .vimrc"
 - vimrc, map_write: map W :wa<CR>
 - vimrc, map_insert: imap <C-W> <Esc>:wa<CR>
-- vimrc, map_save: map W :wa^M
-- todo: :colo pablo colorscheme
+- registers, list: :reg
+- registers, paste: "\"xp (paste register x)"
+- registers, link: http://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers  

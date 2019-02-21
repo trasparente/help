@@ -4,39 +4,45 @@
 <section id="{{ tag[0] }}"><header>{{ tag[0] }}</header>
 <dl>
 {%- for line in tag[1] -%} 
-{%- assign line_sorted = line | sort -%}
+  {%- assign line_sorted = line | sort -%}
   {%- for element in line_sorted -%}
     {%- assign keywords = element[0] | split: "," -%}
     {% if keywords.size == 1 %}
-  <dt>{{ keywords }}</dt>
-<dd>{% if element[1].first != nil %}
-{{ element[1] | join:"<br>" }}
-{% else %}
-{{ element[1] }}
-{% endif %}</dd>
+  <dt>
+{{ keywords | join: "" | replace: "_", " "  }}
+  </dt>
+  <dd>
+      {%- if element[1].first != nil -%}
+        {% for e in element[1] %}
+          {%- assign array="1" | split: "" | push: e -%}
+          {%- include escape.html string=array -%}
+          {% unless forloop.last %}<br>{% endunless %}
+        {% endfor %}
+      {%- else -%}
+{% include escape.html string=element %}
+      {% endif %}
+  </dd>
     {%- else -%}
       {%- assign list = list | push: element -%}
     {% endif %}
   {%- endfor -%}
 {% endfor %}
 </dl>
-{% assign list_sorted = list | sort %}
+{%- assign list_sorted = list | sort -%}
 {%- assign level_1 = nil -%}
-{%- assign level_2 = nil -%}
-{%- assign level_3 = nil -%}
 {% for entry in list_sorted %}
-  {% assign levels = entry[0] | split: "," %}
+  {%- assign levels = entry[0] | split: "," -%}
   {% if level_1 == nil or level_1 != levels[0] %}
     {% if level_1 != nil %}</dl></article>{% endif %}
 <article class="{{ levels | join '' }}">
-  <header>{{ levels[0] }}</header><dl>
-    {% assign level_1 = levels[0] %}
+  <header>{{ levels[0] }}</header>
+    <dl>
+    {%- assign level_1 = levels[0] -%}
   {% endif %}
-  <dt>{% for l in (1..levels.size) %}{{ levels[l] | replace: "_", " " }}{% endfor %}</dt>
-  <dd>{% if entry[1].first != nil %}
+<dt>{% for l in (1..levels.size) %}{{ levels[l] | replace: "_", " " }}{% endfor %}</dt>
+<dd>{% if entry[1].first != nil %}
 {{ entry[1] | join:"<br>" }}
-{% else %}
-{{ entry[1] }}
+{% else %}{% include escape.html string=entry %}
 {% endif %}</dd>
 {% endfor %}
 {% if level_1 != nil %}</dl></article>{% endif %}
