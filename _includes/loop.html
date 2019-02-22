@@ -1,0 +1,59 @@
+{% assign data_sorted = include.data | sort %}
+{% assign list = "" | split: "" %}
+{%- for tag in data_sorted -%}
+<section id="{{ tag[0] }}"><header>{{ tag[0] }}</header>
+{%- assign directs = nil -%}
+{%- for line in tag[1] -%} 
+  {%- assign line_sorted = line | sort -%}
+  {%- for element in line_sorted -%}
+    {%- assign keywords = element[0] | split: "," -%}
+    {% if keywords.size == 1 %}
+      {% if directs == nil %}
+  <article>
+    <dl>
+      {%- assign directs = true -%}
+      {% endif %}
+    <dt>
+{{ keywords | join: "" | replace: "_", " "  }}
+    </dt>
+    <dd>
+      {%- if element[1].first != nil -%}
+        {% for e in element[1] %}
+          {%- assign array="1" | split: "" | push: e -%}
+          {%- include escape.html string=array -%}
+          {% unless forloop.last %}<br>{% endunless %}
+        {% endfor %}
+      {%- else -%}
+{% include escape.html string=element %}
+      {% endif %}
+    </dd>
+    {%- else -%}
+      {%- assign list = list | push: element -%}
+    {% endif %}
+  {%- endfor -%}
+{% endfor %}
+{% if directs %}
+  </dl>
+</article>
+{% endif %}
+{%- assign list_sorted = list | sort -%}
+{%- assign level_1 = nil -%}
+{% for entry in list_sorted %}
+  {%- assign levels = entry[0] | split: "," -%}
+  {% if level_1 == nil or level_1 != levels[0] %}
+    {% if level_1 != nil %}</dl></article>{% endif %}
+<article class="{{ levels[0] }}">
+  <header>{{ levels[0] }}</header>
+    <dl>
+    {%- assign level_1 = levels[0] -%}
+  {% endif %}
+<dt>{% for l in (1..levels.size) %}{{ levels[l] | replace: "_", " " }}{% endfor %}</dt>
+<dd>{% if entry[1].first != nil %}
+{{ entry[1] | join:"<br>" }}
+{% else %}{% include escape.html string=entry %}
+{% endif %}</dd>
+{% endfor %}
+{% if level_1 != nil %}</dl></article>{% endif %}
+</section>
+{% assign list = "" | split: "" %}
+{%- endfor -%}
