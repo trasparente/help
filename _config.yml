@@ -6,5 +6,4 @@ plugins:
 exclude:
   - README.md
   - LICENSE
-skin: serif
 timezone: Europe/Rome
