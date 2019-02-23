@@ -17,3 +17,6 @@
 - move, line_end: CTRL-E
 - tar, gz: tar -zxvf filename.gz
 - tar, xz: tar -xvf filename.xz
+- gem, list: gem list
+- gem, list: gem list | grep github
+- gem, uninstall: gem uninstall addressable --version 2.6.0
