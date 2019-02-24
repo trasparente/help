@@ -1,3 +1,5 @@
 - song, play: Enter
 - song, pause: C
 - song, scrubble: Left, Right
+- library, clear: ":clear"
+- libraryu, add: ":add Music"
