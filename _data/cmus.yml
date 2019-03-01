@@ -2,4 +2,4 @@
 - song, pause: C
 - song, scrubble: Left, Right
 - library, clear: ":clear"
-- libraryu, add: ":add Music"
+- library, add: ":add Music"

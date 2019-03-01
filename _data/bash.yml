@@ -2,6 +2,7 @@
 - usb: lsusb
 - release: lsb_release -a
 - alias: alias lll='ll --group-directories-first'
+- alias: alias celsius="paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'"
 - youtube_dl: youtube-dl --extract-audio --audio-format mp3 -o 'FOLDER/playlist/%(title)s.%(ext)s' url
 - delete, line_beginning: CTRL-U
 - delete, line_end: CTRL-K
@@ -10,7 +11,7 @@
 - filesystem, remove_file: rm filename
 - keyboard, events_start: xev
 - keyboard, events_end: CTRL-C
-- settings, print: setxkbmap -print -verbose 10
+- keymap, settings: setxkbmap -print -verbose 10
 - keymap, file: /usr/share/X11/xkd/symbols
 - keymap, list: xmodmap -pke
 - move, line_beginning: CTRL-A
@@ -22,3 +23,8 @@
 - gem, uninstall: gem uninstall addressable --version 2.6.0
 - bashrc, source: ". ~/.bashrc"
 - apt-get, purge:  sudo apt-get purge ...
+- install, run:
+  - cd folder/file.run
+  - chmod -x file.run
+  - ./file.run
+- versions, linux: lsb_release -a > Ubuntu 18.04.2 LTS bionic

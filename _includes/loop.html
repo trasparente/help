@@ -3,7 +3,7 @@
 {%- for tag in data_sorted -%}
 <section id="{{ tag[0] }}"><header>{{ tag[0] }}</header>
 {%- assign directs = nil -%}
-{%- for line in tag[1] -%} 
+{%- for line in tag[1] -%}
   {%- assign line_sorted = line | sort -%}
   {%- for element in line_sorted -%}
     {%- assign keywords = element[0] | split: "," -%}
@@ -47,7 +47,7 @@
     <dl>
     {%- assign level_1 = levels[0] -%}
   {% endif %}
-<dt>{% for l in (1..levels.size) %}{{ levels[l] | replace: "_", " " }}{% endfor %}</dt>
+<dt>{% for l in (1..levels.size) %}{% assign title=levels[l] %}{% include title.html string=title %}{% endfor %}</dt>
 <dd>{% if entry[1].first != nil %}
 {{ entry[1] | join:"<br>" }}
 {% else %}{% include escape.html string=entry %}
