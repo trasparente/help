@@ -1,4 +1,6 @@
 repository: trasparente/help
+sass:
+  sass_dir: _sass
 plugins:
   - jekyll-coffeescript
   - jekyll-github-metadata
