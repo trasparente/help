@@ -1,0 +1,6 @@
+{%- assign domain = include.string | strip | truncate: 4, "" -%}
+{% if domain == "http" %}
+<a href="{{ include.string }}">Link</a>
+{% else %}
+{{ include.string | replace: "_", " " }}
+{% endif %}
