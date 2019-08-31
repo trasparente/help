@@ -1,5 +1,10 @@
 - gradient, border: "background: linear-gradient(to top, rgba(255,255,0,.2) 1px, transparent 1px)"
-- media query:
+- media_query:
   - "@media (max-width: 768px)"
   - "  a"
   - "    display: block"
+- mobile:
+  - "main"
+  - "max-width: 38rem;"
+  - "padding: 2rem;"
+  - "margin: auto;"

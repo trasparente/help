@@ -31,3 +31,4 @@
 - architecture, add: sudo dpkg --add-architecture i386
 - architecture, list: dpkg --print-foreign-architectures
 - architecture, remove: sudo dpkg --remove-architecture i368
+- fonts: fc-match -a
