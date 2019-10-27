@@ -4,3 +4,4 @@
 - library, clear: ":clear"
 - library, add: ":add Music"
 - update tags: ":update-cache -f"
+- ":colorscheme": "in usr/scahr/cmus/"
