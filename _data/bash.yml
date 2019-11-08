@@ -21,6 +21,7 @@
 - gem, list: gem list
 - gem, list: gem list | grep github
 - gem, uninstall: gem uninstall addressable --version 2.6.0
+- gem, update: gem update github-pages
 - bashrc, source: ". ~/.bashrc"
 - apt-get, purge:  sudo apt-get purge ...
 - install, run:
