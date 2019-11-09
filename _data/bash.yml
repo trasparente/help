@@ -33,3 +33,4 @@
 - architecture, list: dpkg --print-foreign-architectures
 - architecture, remove: sudo dpkg --remove-architecture i368
 - fonts: fc-match -a
+- pdf, merge: "gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=detonazione.pdf *-*.pdf"
