@@ -1,0 +1,2 @@
+- merge: "gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=detonazione.pdf *-*.pdf"
+- optimize: "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf"
