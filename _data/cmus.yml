@@ -5,4 +5,4 @@
 - library, add: ":add Music"
 - update tags: ":update-cache -f"
 - ":colorscheme": "in usr/scahr/cmus/"
-- playlist: 'y' to add in playlist
+- playlist: "`y` to add in playlist"
