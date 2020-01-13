@@ -7,3 +7,7 @@
 - ":colorscheme": "in usr/scahr/cmus/"
 - playlist, add: "`y`"
 - playlist, remove: "`D`"
+- play, volume: +/-
+- play, continue: "`C`"
+- play, repeat: "`R`"
+- play, shuffle: "`S`"
