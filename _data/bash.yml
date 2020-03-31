@@ -33,6 +33,6 @@
 - architecture, list: dpkg --print-foreign-architectures
 - architecture, remove: sudo dpkg --remove-architecture i368
 - fonts: fc-match -a
-- history: history
+- history, list: history
 - history, execute command n: "!n"
 - history, execute last command: "!!"
