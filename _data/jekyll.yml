@@ -4,7 +4,7 @@
   - "petrosh 1637 ..."
   - "petrosh 31232 ..."
   - kill -9 1637
-- date, date_to_rfc822: {{ site.date | date_to_rfc822 }}
+- date, date_to_rfc822: "{{ site.date | date_to_rfc822 }}"
 - toc:
   - "* toc"
   - "{:toc}"
