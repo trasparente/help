@@ -36,3 +36,4 @@
 - history, list: history
 - history, execute command n: "!n"
 - history, execute last command: "!!"
+- rvm, warning: "`rvm reset` for the last warning"

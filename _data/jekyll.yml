@@ -15,3 +15,13 @@
   - "      'html'"
   - "    ]"
 - css: never ever use /assets/css/style.xxx
+- install, new:
+  - sudo apt remove ruby bundler jekyll --purge
+  - rm -rf ~/.gem ~/.ruby ~/.rvm
+  - sudo apt clean && sudo apt autoremove && sudo apt autoclean
+  - sudo apt update && apt upgrade
+  - sudo apt-get install ruby-full build-essential zlib1g-dev
+  - gem install jekyll bundler
+  - gem install github-pages
+  - gem uninstall jekyll --version 4.1.1
+  - jekyll -v
