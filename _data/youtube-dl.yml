@@ -1,3 +1,4 @@
 - download, audio: "~/Music:$ youtube-dl --extract-audio --audio-format mp3 -o 'FOLDER/playlist/%(title)s.%(ext)s' url"
 - download, best: "youtube-dl -f best url"
+- download, playlist: "youtube-dl -i PLwJ2VKmefmxpUJEGB1ff6yUZ5Zd7Gegn2"
 - upgrade: pip install --upgrade youtube-dl

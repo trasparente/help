@@ -37,4 +37,10 @@
 - history, execute command n: "!n"
 - history, execute last command: "!!"
 - rvm, warning: "`rvm reset` for the last warning"
-- virtual_terminal: CTRL+ALT+F(1-6)
+- virtual_terminal, keys: CTRL+ALT+F(1-6)
+- virtual_terminal, open: sudo chvt 3
+- virtual_terminal, close: chvt 2
+- virtual_terminal, configure: sudo dpkg-reconfigure console-setup
+- virtual_terminal, apply: setupcon
+- virtual_terminal, list: who -la
+- virtual_terminal, open: kill xxxx
