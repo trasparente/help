@@ -11,3 +11,4 @@
 - play, continue: "`C`"
 - play, repeat: "`R`"
 - play, shuffle: "`S`"
+- kill: "killall cmus"
