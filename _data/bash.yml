@@ -44,3 +44,4 @@
 - virtual_terminal, apply: setupcon
 - virtual_terminal, list: who -la
 - virtual_terminal, open: kill xxxx
+- debian, install: "sudo dpkg -i filename.deb"
