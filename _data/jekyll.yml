@@ -25,3 +25,4 @@
   - gem install github-pages
   - gem uninstall jekyll --version 4.1.1
   - jekyll -v
+- VSC: jekyll serve --watch --livereload
