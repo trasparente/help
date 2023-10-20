@@ -45,3 +45,6 @@
 - virtual_terminal, list: who -la
 - virtual_terminal, open: kill xxxx
 - debian, install: "sudo dpkg -i filename.deb"
+- win10:
+  - "C:\Users\USERNAME\.bashrc"
+  - alias jkl="jekyll serve --watch --livereload"
